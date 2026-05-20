@@ -1,4 +1,4 @@
-// FILE: src/main/java/za/co/wethinkcode/service/PvPGuildSystem.java
+//// FILE: src/main/java/za/co/wethinkcode/service/PvPGuildSystem.java
 
 package za.co.wethinkcode.service;
 

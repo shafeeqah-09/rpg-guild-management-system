@@ -15,6 +15,10 @@ public class Match {
     // winnerId (int)
     // status (MatchStatus)
 
+    private int matchID;
+    private int matchId1;
+    private int matchId2;
+
     // TODO: constructor:
     // Match(int matchId, int memberId1, int memberId2)
     // - set status = PENDING

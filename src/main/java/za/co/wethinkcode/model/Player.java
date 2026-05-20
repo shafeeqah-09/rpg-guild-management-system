@@ -9,6 +9,16 @@ public class Player {
         DIAMOND
     }
 
+    private int id;
+    private String name;
+    private int level;
+    private int xp;
+    private int gold;
+    private PlayerRank rank;
+    private Inventory inventory;
+    private Weapon equippedWeapon;
+    private Armor equippedArmor;
+
     // TODO: declare private fields:
     // id (int)
     // name (String)
@@ -28,6 +38,14 @@ public class Player {
     // - rank = BRONZE
     // - inventory = new Inventory()
 
+    public Player(int id, String name){
+        this.level = 1;
+        this.xp = 0;
+        this.gold = 0;
+        this.rank = PlayerRank.BRONZE;
+        this.inventory = new Inventory();
+    }
+
     // TODO: implement getters:
     // int getId()
     // String getName()
@@ -37,25 +55,86 @@ public class Player {
     // PlayerRank getRank()
     // Inventory inventory()
 
+    public int getId(){
+        return this.id;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getLevel(){
+        return this.level;
+    }
+
+    public int getXp(){
+        return this.xp;
+    }
+
+    public int getGold(){
+        return this.gold;
+    }
+
+    public PlayerRank getRank(){
+        return this.rank;
+    }
+
+    public Inventory inventory(){
+        return this.inventory;
+    }
+
     // TODO: implement addExperience(int xp)
     // - add xp
     // - call levelUp() when threshold reached
+
+    public void addExperience(int xp){
+    }
 
     // TODO: implement levelUp()
     // - increase level by 1
     // - reset or reduce xp appropriately (your design should be consistent with tests)
 
+    public void levelUp(){
+        this.level += 1;
+    }
     // TODO: implement addGold(int gold)
     // - increase gold
+
+    public void addGold(int gold){
+       this.gold = getGold();
+    }
 
     // TODO: implement spendGold(int amount)
     // - throw IllegalArgumentException if insufficient gold
 
+    public void spendGold(int amount){
+        if(getGold() < amount){
+            throw new IllegalArgumentException();
+        }
+    }
+
     // TODO: implement equipWeapon(Weapon weapon)
+    public void equipWeapon(Weapon weapon){
+
+    }
 
     // TODO: implement equipArmor(Armor armor)
+    public void equipArmor(Armor armor){
+
+    }
 
     // TODO: implement updateRank(PlayerRank rank)
+    public void updateRank(PlayerRank rank){
+
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Player: ").append(getName()).append("(Level ").append(getLevel()).append(",Rank").append(getGold());
+
+        return sb.toString().trim();
+    }
 
     // TODO: override toString()
     // Example:
