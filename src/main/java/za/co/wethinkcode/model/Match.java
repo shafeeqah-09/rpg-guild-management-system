@@ -18,6 +18,8 @@ public class Match {
     private int matchID;
     private int matchId1;
     private int matchId2;
+    private int winnerId;
+    private MatchStatus status;
 
     // TODO: constructor:
     // Match(int matchId, int memberId1, int memberId2)
